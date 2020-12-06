@@ -1,4 +1,5 @@
 # Doubleheader
+![logo](https://raw.githubusercontent.com/harisjlatif/doubleheader/main/assets/static/images/doubleheader-banner-full.png)
 
 To start your Phoenix server:
 

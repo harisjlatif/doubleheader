@@ -1,5 +1,6 @@
-# Doubleheader
 ![logo](https://raw.githubusercontent.com/harisjlatif/doubleheader/main/assets/static/images/doubleheader-banner-full.png)
+
+Doubleheader is a sports league management platform.
 
 To start your Phoenix server:
 

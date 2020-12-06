@@ -7,15 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :skore,
-  ecto_repos: [Skore.Repo]
+config :doubleheader,
+  ecto_repos: [Doubleheader.Repo]
 
 # Configures the endpoint
-config :skore, SkoreWeb.Endpoint,
+config :doubleheader, DoubleheaderWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "pDsuJkLS7n/99aDjJXV9RSgrX3RTs5qNI19yuRTtqFNHmpj6q9FwPgFlkcsE+FAw",
-  render_errors: [view: SkoreWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Skore.PubSub,
+  render_errors: [view: DoubleheaderWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Doubleheader.PubSub,
   live_view: [signing_salt: "f1qqFwN+"]
 
 # Configures Elixir's Logger

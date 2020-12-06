@@ -1,11 +1,11 @@
-defmodule SkoreWeb.Router do
-  use SkoreWeb, :router
+defmodule DoubleheaderWeb.Router do
+  use DoubleheaderWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {SkoreWeb.LayoutView, :root}
+    plug :put_root_layout, {DoubleheaderWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,14 +14,14 @@ defmodule SkoreWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", SkoreWeb do
+  scope "/", DoubleheaderWeb do
     pipe_through :browser
 
     live "/", PageLive, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", SkoreWeb do
+  # scope "/api", DoubleheaderWeb do
   #   pipe_through :api
   # end
 
@@ -37,7 +37,7 @@ defmodule SkoreWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: SkoreWeb.Telemetry
+      live_dashboard "/dashboard", metrics: DoubleheaderWeb.Telemetry
     end
   end
 end

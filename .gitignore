@@ -20,7 +20,7 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-skore-*.tar
+doubleheader-*.tar
 
 # If NPM crashes, it generates a log, let's ignore it too.
 npm-debug.log
@@ -35,3 +35,6 @@ npm-debug.log
 
 # Ignore environment file
 .env
+
+# Ignore vscode dot files
+/.vscode

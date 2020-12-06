@@ -1,6 +1,6 @@
-defmodule Skore do
+defmodule Doubleheader do
   @moduledoc """
-  Skore keeps the contexts that define your domain
+  Doubleheader keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

@@ -1,4 +1,4 @@
-# Skore
+# Doubleheader
 
 To start your Phoenix server:
 

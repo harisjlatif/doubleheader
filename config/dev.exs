@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :skore, Skore.Repo,
+config :doubleheader, Doubleheader.Repo,
   username: "postgres",
   password: "postgres",
-  database: "skore_dev",
+  database: "doubleheader_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :skore, Skore.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :skore, SkoreWeb.Endpoint,
+config :doubleheader, DoubleheaderWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,13 +55,13 @@ config :skore, SkoreWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :skore, SkoreWeb.Endpoint,
+config :doubleheader, DoubleheaderWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/skore_web/(live|views)/.*(ex)$",
-      ~r"lib/skore_web/templates/.*(eex)$"
+      ~r"lib/Doubleheader_web/(live|views)/.*(ex)$",
+      ~r"lib/Doubleheader_web/templates/.*(eex)$"
     ]
   ]
 

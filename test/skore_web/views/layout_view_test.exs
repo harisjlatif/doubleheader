@@ -1,5 +1,5 @@
-defmodule SkoreWeb.LayoutViewTest do
-  use SkoreWeb.ConnCase, async: true
+defmodule DoubleheaderWeb.LayoutViewTest do
+  use DoubleheaderWeb.ConnCase, async: true
 
   # When testing helpers, you may want to import Phoenix.HTML and
   # use functions such as safe_to_string() to convert the helper

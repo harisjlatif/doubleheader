@@ -1,4 +1,4 @@
-defmodule SkoreWeb.Telemetry do
+defmodule DoubleheaderWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -31,11 +31,11 @@ defmodule SkoreWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("skore.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("skore.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("skore.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("skore.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("skore.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("Doubleheader.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("Doubleheader.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("Doubleheader.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("Doubleheader.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("Doubleheader.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),
@@ -49,7 +49,7 @@ defmodule SkoreWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {SkoreWeb, :count_users, []}
+      # {DoubleheaderWeb, :count_users, []}
     ]
   end
 end

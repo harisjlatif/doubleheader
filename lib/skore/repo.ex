@@ -1,5 +1,5 @@
-defmodule Skore.Repo do
+defmodule Doubleheader.Repo do
   use Ecto.Repo,
-    otp_app: :skore,
+    otp_app: :doubleheader,
     adapter: Ecto.Adapters.Postgres
 end

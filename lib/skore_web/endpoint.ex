@@ -1,16 +1,16 @@
-defmodule SkoreWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :skore
+defmodule DoubleheaderWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :doubleheader
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_skore_key",
+    key: "_Doubleheader_key",
     signing_salt: "+kpkp5QG"
   ]
 
-  socket "/socket", SkoreWeb.UserSocket,
+  socket "/socket", DoubleheaderWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -22,7 +22,7 @@ defmodule SkoreWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :skore,
+    from: :doubleheader,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -32,7 +32,7 @@ defmodule SkoreWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :skore
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :doubleheader
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -50,5 +50,5 @@ defmodule SkoreWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug SkoreWeb.Router
+  plug DoubleheaderWeb.Router
 end

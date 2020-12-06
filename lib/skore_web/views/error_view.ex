@@ -1,5 +1,5 @@
-defmodule SkoreWeb.ErrorView do
-  use SkoreWeb, :view
+defmodule DoubleheaderWeb.ErrorView do
+  use DoubleheaderWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

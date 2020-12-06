@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(Skore.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Doubleheader.Repo, :manual)

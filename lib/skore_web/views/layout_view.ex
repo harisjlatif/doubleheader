@@ -1,3 +1,3 @@
-defmodule SkoreWeb.LayoutView do
-  use SkoreWeb, :view
+defmodule DoubleheaderWeb.LayoutView do
+  use DoubleheaderWeb, :view
 end

@@ -1,5 +1,5 @@
-defmodule SkoreWeb.PageLive do
-  use SkoreWeb, :live_view
+defmodule DoubleheaderWeb.PageLive do
+  use DoubleheaderWeb, :live_view
 
   @impl true
   def mount(_params, _session, socket) do
@@ -26,7 +26,7 @@ defmodule SkoreWeb.PageLive do
   end
 
   defp search(query) do
-    if not SkoreWeb.Endpoint.config(:code_reloader) do
+    if not DoubleheaderWeb.Endpoint.config(:code_reloader) do
       raise "action disabled when not in development"
     end
 

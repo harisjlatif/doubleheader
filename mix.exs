@@ -1,11 +1,11 @@
-defmodule Skore.MixProject do
+defmodule Doubleheader.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :skore,
+      app: :doubleheader,
       version: "0.1.0",
-      elixir: "~> 1.7",
+      elixir: "~> 1.11",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -19,7 +19,7 @@ defmodule Skore.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Skore.Application, []},
+      mod: {Doubleheader.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

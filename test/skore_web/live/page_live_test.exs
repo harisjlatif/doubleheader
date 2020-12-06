@@ -1,5 +1,5 @@
-defmodule SkoreWeb.PageLiveTest do
-  use SkoreWeb.ConnCase
+defmodule DoubleheaderWeb.PageLiveTest do
+  use DoubleheaderWeb.ConnCase
 
   import Phoenix.LiveViewTest
 

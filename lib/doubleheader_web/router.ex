@@ -19,8 +19,6 @@ defmodule DoubleheaderWeb.Router do
 
   scope "/", DoubleheaderWeb do
     pipe_through :browser
-
-    live "/", PageLive, :index
   end
 
   # Other scopes may use custom stacks.
@@ -49,7 +47,7 @@ defmodule DoubleheaderWeb.Router do
   scope "/", DoubleheaderWeb do
     pipe_through [:browser, :redirect_if_user_is_authenticated]
 
-    get "/users/register", UserRegistrationController, :new
+    live "/users/register", UserLive.New
     post "/users/register", UserRegistrationController, :create
     get "/users/log_in", UserSessionController, :new
     post "/users/log_in", UserSessionController, :create
@@ -61,7 +59,7 @@ defmodule DoubleheaderWeb.Router do
 
   scope "/", DoubleheaderWeb do
     pipe_through [:browser, :require_authenticated_user]
-
+    live "/users/dashboard", DashboardLive.Index
     get "/users/settings", UserSettingsController, :edit
     put "/users/settings", UserSettingsController, :update
     get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email

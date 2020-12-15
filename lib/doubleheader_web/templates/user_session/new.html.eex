@@ -1,27 +1,41 @@
-<h1>Log in</h1>
-
-<%= form_for @conn, Routes.user_session_path(@conn, :create), [as: :user], fn f -> %>
-  <%= if @error_message do %>
-    <div class="alert alert-danger">
-      <p><%= @error_message %></p>
+<section class="is-fullheight">
+  <figure class="pt-5 px-5 container has-text-centered">
+    <img src="<%= Routes.static_path(@conn, "/images/doubleheader-banner-full.png") %>">
+  </figure>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-4 is-offset-4">
+        <h3 class="title has-text-black-bis"> Sign in </h3>
+        <p class="subtitle has-text-grey"> Please sign in to proceed. </p>
+        <div class="box">
+          <button type="button" class="my-2 button is-medium is-fullwidth has-margin-bottom-25 is-danger">
+            <span>Continue with Google</span><span class="icon is-small"><i class="fab fa-google"></i></span>
+          </button>
+          <button type="button" class="my-2 button is-medium is-fullwidth has-margin-bottom-25 is-black">
+            <span>Continue with Apple</span><span class="icon is-small"><i class="fab fa-apple"></i></span>
+          </button>
+          <button type="button" class="my-2 button is-medium is-fullwidth has-margin-bottom-25 is-link">
+            <span>Continue with Facebook</span><span class="icon is-small"><i class="fab fa-facebook"></i></span>
+          </button>
+          <div class="divider">OR</div>
+          <%= form_for @conn, Routes.user_session_path(@conn, :create), [as: :user], fn f -> %>
+          <div class="field">
+            <div class="control has-icons-left is-large is-clearfix">
+              <%= email_input f, :email, class: "input is-large", autofocus: "autofocus", placeholder: "Your Email", required: true %>
+              <span class="icon is-left is-medium"><i class="fas fa-envelope"></i></span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control has-icons-left is-large is-clearfix">
+              <%= password_input f, :password, class: "input is-large", autofocus: "autofocus", placeholder: "Your Password", required: true%>
+              <span class="icon is-left is-medium"><i class="fas fa-lock"></i></span>
+            </div>
+          </div>
+          <%= submit "Login", class: "button is-block is-primary is-large is-fullwidth" %>
+          <% end %>
+        </div>
+        <p class="has-text-grey"><a href="<%= Routes.live_path(@conn, DoubleheaderWeb.UserLive.New) %>">Sign Up</a> · <a href="/passwordReset">Forgot Password</a> · </p>
+      </div>
     </div>
-  <% end %>
-
-  <%= label f, :email %>
-  <%= email_input f, :email, required: true %>
-
-  <%= label f, :password %>
-  <%= password_input f, :password, required: true %>
-
-  <%= label f, :remember_me, "Keep me logged in for 60 days" %>
-  <%= checkbox f, :remember_me %>
-
-  <div>
-    <%= submit "Log in" %>
   </div>
-<% end %>
-
-<p>
-  <%= link "Register", to: Routes.user_registration_path(@conn, :new) %> |
-  <%= link "Forgot your password?", to: Routes.user_reset_password_path(@conn, :new) %>
-</p>
+</section>

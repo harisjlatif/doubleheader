@@ -60,8 +60,8 @@ config :doubleheader, DoubleheaderWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/Doubleheader_web/(live|views)/.*(ex)$",
-      ~r"lib/Doubleheader_web/templates/.*(eex)$"
+      ~r"lib/doubleheader_web/(live|views)/.*(ex)$",
+      ~r"lib/doubleheader_web/templates/.*(eex)$"
     ]
   ]
 

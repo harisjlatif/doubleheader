@@ -1,11 +1,15 @@
 /* This file is for your main application css. */
+@import "variables";
+
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
+
 @import "../node_modules/nprogress/nprogress.css";
 
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
+@import "bulma";
+@import "~@creativebulma/bulma-divider";
 
 /* LiveView specific classes for your customizations */
 .phx-no-feedback.invalid-feedback,
@@ -90,7 +94,7 @@
   display: none;
 }
 .invalid-feedback {
-  color: #a94442;
-  display: block;
-  margin: -1rem 0 2rem;
+  @extend
+  .help,
+  .is-danger;
 }

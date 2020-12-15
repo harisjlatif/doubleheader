@@ -88,6 +88,7 @@ defmodule DoubleheaderWeb do
       import Phoenix.View
 
       import DoubleheaderWeb.ErrorHelpers
+      import DoubleheaderWeb.InputHelpers
       import DoubleheaderWeb.Gettext
       alias DoubleheaderWeb.Router.Helpers, as: Routes
     end

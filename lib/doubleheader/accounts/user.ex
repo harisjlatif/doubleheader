@@ -2,8 +2,14 @@ defmodule Doubleheader.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @create_fields [:first_name, :last_name, :email, :password]
+
+  @required_fields [:first_name, :last_name, :email, :password]
+
   @derive {Inspect, except: [:password]}
   schema "users" do
+    field :first_name, :string
+    field :last_name, :string
     field :email, :string
     field :password, :string, virtual: true
     field :hashed_password, :string
@@ -31,7 +37,8 @@ defmodule Doubleheader.Accounts.User do
   """
   def registration_changeset(user, attrs, opts \\ []) do
     user
-    |> cast(attrs, [:email, :password])
+    |> cast(attrs, @create_fields)
+    |> validate_required(@required_fields)
     |> validate_email()
     |> validate_password(opts)
   end
